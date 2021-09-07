@@ -1,0 +1,27 @@
+.new-tweet{
+width: 100%;
+font-size: 32px;
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+}
+
+
+#tweet-text{
+border: none;
+border-color: transparent;
+background-color: transparent;
+border-bottom: 5px solid black;
+}
+
+.button{
+  font-family: "Bungee";;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.button-style{
+  color: white;
+  background-color: #4056A1;
+}

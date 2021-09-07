@@ -1,0 +1,13 @@
+header {
+  height: 400px;
+  width: 100%;
+  background-color: rgb(80, 200, 255);
+  color:white;
+  background-image: url("https://www.transparenttextures.com/patterns/always-grey.png");
+/* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+}
+
+.avatar{
+  display: flex;
+  justify-content: center;
+}
