@@ -11,6 +11,15 @@ This repository is the starter code for the project: Students will fork and clon
 3. Start the web server using the `npm run local` command. The app will be served at <http://localhost:8080/>.
 4. Go to <http://localhost:8080/> in your browser.
 
+## Final Product
+
+Mobile View:
+![TinyUrls home page](/public/images/TweeterMobile.png  "Tweeter Mobile")
+
+Desktop View:
+![Create TinyUrl](/public/images/TweeterDesktop.png  "Tweeter Desktop")
+
+
 ## Dependencies
 
 - Express

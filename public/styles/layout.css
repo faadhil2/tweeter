@@ -15,7 +15,7 @@ html {
  */
 nav {
   font-family: "Bungee", "Sans-Serif";
-  position: absolute;
+  position: fixed;
   top: 0;
   width: 100%;
 }
@@ -26,6 +26,7 @@ body {
   background-color: #f4f1ec;
   font-family: "Source Sans Pro", "Sans-Serif";
   font-size: 24px;
+  padding-bottom: 3rem;
 }
 
 /*
