@@ -13,10 +13,12 @@ This repository is the starter code for the project: Students will fork and clon
 
 ## Final Product
 
-Mobile View:
+### Mobile View:
+
 ![TinyUrls home page](/public/images/TweeterMobile.gif  "Tweeter Mobile")
 
-Desktop View:
+### Desktop View:
+
 ![Create TinyUrl](/public/images/TweeterDesktop.gif  "Tweeter Desktop")
 
 
