@@ -1,0 +1,28 @@
+/* Desktop styles */
+@media screen and (min-width: 1024px) {
+
+body div.desktop-view{
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-top: 200px;
+  border: solid;
+}
+ 
+header.textureBackground{
+  margin-top: 0;
+  margin-left: 1.5em;
+  margin-right: 1.5em;
+}
+
+main.container{
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+}
+
+section.new-tweet{
+  padding-top: 0;
+}
+
+}

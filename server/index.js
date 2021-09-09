@@ -32,6 +32,10 @@ const tweetsRoutes = require("./routes/tweets")(DataHelpers);
 // Mount the tweets routes at the "/tweets" path prefix:
 app.use("/tweets", tweetsRoutes);
 
+app.get("tweets", (req,res) => {
+  
+})
+
 app.post("/tweets", (req, res) => {
   const tweet = req.body.text;
   // if (req.session.user_id) {

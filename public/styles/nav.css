@@ -5,20 +5,31 @@ nav {
   color: #FFFFFF;
   padding-left: 1.5em;
   padding-right: 1.5em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 1.5em;
 }
 
-nav.span{
+nav span{
   font-family: "Bungee";
-  padding-top: 1.5em;
+  padding-top: 2.5em;
 }
 
 .sideNav{
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: center;
   font-family: "Sans-Serif";
 }
 
 .stack-top{
   z-index: 9;
 }
+
+.double-down-arrow{
+  color: red;
+  /* max-height:0;
+    transition: max-height 0.7s ease-in;  */
+}
+
