@@ -51,8 +51,6 @@ article.tweet article{
   padding-bottom: 10px;
   border: 4px solid;
   margin-top: 50px;
-  /* box-shadow: 5px 5px; */
-  /* padding-top: 20px; */
 }
 
 article.tweet article:hover{
@@ -111,3 +109,4 @@ article.tweet main{
   padding-top: 10px;
   color: red;
 }
+
