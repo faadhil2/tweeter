@@ -49,6 +49,7 @@ outline: none;
   padding-top: 50px;
 }
 
+/* Tweet Article Styling */
 article.tweet article{
   padding-left: 10px;
   padding-right: 10px;
@@ -106,10 +107,12 @@ article.tweet main{
   border-bottom: 3px solid black;
 }
 
+/* Hide element class */
 .hidden{
   display: none;
 }
 
+/* Error message */
 .error-message{
   padding-top: 10px;
   color: red;

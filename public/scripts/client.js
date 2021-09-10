@@ -4,32 +4,31 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-
 $( document ).ready(function() {
-
+  
+  //Initial loading of tweets
   loadTweets();
 
- 
+  //Form Submit Handler
   $("#target").on('submit',function( event ){
     if ($('.counter').val() < 0){
       event.preventDefault();
       $('#emptyTweet').slideUp("slow", function() {$('#emptyTweet').addClass('hidden')});
       return $('#charLimit').slideDown("slow", function() {$('#charLimit').removeClass('hidden')});
       
-    
     }if($('.counter').val() > 139){
       event.preventDefault();
       $('#charLimit').slideUp("slow", function() {$('#charLimit').addClass('hidden')});
       return $('#emptyTweet').slideDown("slow", function() {$('#emptyTweet').removeClass('hidden')});
    }
     
-   
+  //  Serialize Data
     const serializedData = $(this).serialize();
 
     $('#charLimit').slideUp("slow", function() {$('#charLimit').addClass('hidden')});
     $('#emptyTweet').slideUp("slow", function() {$('#emptyTweet').addClass('hidden')});
 
-
+// Ajax POST request
     $.ajax({
       type: "POST",
       url: "/tweets",
@@ -45,6 +44,7 @@ $( document ).ready(function() {
 
 });
 
+//Create the tweet element
 const createTweetElement = function(tweetObj){
   let tweetArticle = [];
   for (tweet in tweetObj){
@@ -74,6 +74,7 @@ const createTweetElement = function(tweetObj){
 return tweetArticle;
 }
 
+//Render tweets
 const renderTweets = function(tweet){
   let tweetArray = createTweetElement(tweet);
 for (let element of tweetArray){
@@ -82,6 +83,7 @@ for (let element of tweetArray){
 }
 }
 
+//Load Tweet Function
 const loadTweets = function(){
   $.ajax('/tweets', { method: 'GET' })
   .done(function (tweets) {
@@ -90,6 +92,8 @@ const loadTweets = function(){
     console.log(tweets) 
 });
 }
+
+//Escape function (Security)
 const escape = function (str) {
   let div = document.createElement("div");
   div.appendChild(document.createTextNode(str));
