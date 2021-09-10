@@ -4,36 +4,36 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-$( document ).ready(function() {
-  
+$(document).ready(function () {
+
   //Initial loading of tweets
   loadTweets();
 
   //Form Submit Handler
-  $("#target").on('submit',function( event ){
-    if ($('.counter').val() < 0){
+  $("#target").on('submit', function (event) {
+    if ($('.counter').val() < 0) {
       event.preventDefault();
-      $('#emptyTweet').slideUp("slow", function() {$('#emptyTweet').addClass('hidden')});
-      return $('#charLimit').slideDown("slow", function() {$('#charLimit').removeClass('hidden')});
-      
-    }if($('.counter').val() > 139){
+      $('#emptyTweet').slideUp("slow", function () { $('#emptyTweet').addClass('hidden') });
+      return $('#charLimit').slideDown("slow", function () { $('#charLimit').removeClass('hidden') });
+
+    } if ($('.counter').val() > 139) {
       event.preventDefault();
-      $('#charLimit').slideUp("slow", function() {$('#charLimit').addClass('hidden')});
-      return $('#emptyTweet').slideDown("slow", function() {$('#emptyTweet').removeClass('hidden')});
-   }
-    
-  //  Serialize Data
+      $('#charLimit').slideUp("slow", function () { $('#charLimit').addClass('hidden') });
+      return $('#emptyTweet').slideDown("slow", function () { $('#emptyTweet').removeClass('hidden') });
+    }
+
+    //  Serialize Data
     const serializedData = $(this).serialize();
 
-    $('#charLimit').slideUp("slow", function() {$('#charLimit').addClass('hidden')});
-    $('#emptyTweet').slideUp("slow", function() {$('#emptyTweet').addClass('hidden')});
+    $('#charLimit').slideUp("slow", function () { $('#charLimit').addClass('hidden') });
+    $('#emptyTweet').slideUp("slow", function () { $('#emptyTweet').addClass('hidden') });
 
-// Ajax POST request
+    // Ajax POST request
     $.ajax({
       type: "POST",
       url: "/tweets",
       data: serializedData,
-    }).done(function(){
+    }).done(function () {
       loadTweets()
       $('#tweet-text').val('')
       $('.counter').val(140)
@@ -45,9 +45,9 @@ $( document ).ready(function() {
 });
 
 //Create the tweet element
-const createTweetElement = function(tweetObj){
+const createTweetElement = function (tweetObj) {
   let tweetArticle = [];
-  for (tweet in tweetObj){
+  for (tweet in tweetObj) {
     tweetArticle.unshift(`
     <article class= "tweet">
     <article>
@@ -71,26 +71,26 @@ const createTweetElement = function(tweetObj){
     </article>
     `)
   }
-return tweetArticle;
+  return tweetArticle;
 }
 
 //Render tweets
-const renderTweets = function(tweet){
+const renderTweets = function (tweet) {
   let tweetArray = createTweetElement(tweet);
-for (let element of tweetArray){
-  console.log(element)
-   $('#tweet-container').append(element)
-}
+  for (let element of tweetArray) {
+    console.log(element)
+    $('#tweet-container').append(element)
+  }
 }
 
 //Load Tweet Function
-const loadTweets = function(){
+const loadTweets = function () {
   $.ajax('/tweets', { method: 'GET' })
-  .done(function (tweets) {
-    $('#tweet-container').empty()
-    renderTweets(tweets);   
-    console.log(tweets) 
-});
+    .done(function (tweets) {
+      $('#tweet-container').empty()
+      renderTweets(tweets);
+      console.log(tweets)
+    });
 }
 
 //Escape function (Security)
