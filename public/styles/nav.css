@@ -1,3 +1,4 @@
+/* Nav Styling */
 nav {
   height: 120px;
   width: 100%;
@@ -17,6 +18,7 @@ nav span{
   padding-top: 2.5em;
 }
 
+/* Top right-corner -> "Write a Tweet" */
 .sideNav{
   display: flex;
   flex-direction: column;
@@ -24,10 +26,12 @@ nav span{
   font-family: "Sans-Serif";
 }
 
+/* Moves element to the foreground */
 .stack-top{
   z-index: 9;
 }
 
+/* Double-down arrow */
 .double-down-arrow{
   color: red;
 }

@@ -1,6 +1,6 @@
+// Changes to character counter when typing or deleting characters
 $(document).ready(function () {
-  // --- our code goes here ---
-
+  
   $("#tweet-text").on('input', function () {
     const $count = $(this).closest('section')
     const $charCount = $count.find('.counter')
@@ -15,6 +15,4 @@ $(document).ready(function () {
       $charCount.text(140 - currentLength);
     }
   });
-
-
 });

@@ -1,3 +1,4 @@
+/* New Tweets Styling */
 section.new-tweet{
 padding-top: 1em;
 font-size: 32px;
@@ -11,6 +12,7 @@ section.new-tweet form{
   flex-direction: column;
 }
 
+/* Textarea for tweets */
 textarea#tweet-text{
 padding-top: 15px;
 height: 2em;
@@ -22,7 +24,7 @@ border-bottom: 5px solid black;
 outline: none;
 }
 
-
+/* Tweet submit button */
 .button{
   padding-top: 20px;
   font-family: "Bungee";;
@@ -31,15 +33,18 @@ outline: none;
   justify-content: space-between;
 }
 
+/* Tweet button colors */
 .button-style{
   color: white;
   background-color: #4056A1;
 }
 
+/* Error message styling */
 .negative{
   color: red;
 }
 
+/* Header Padding */
 .padding{
   padding-top: 50px;
 }
